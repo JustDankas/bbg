@@ -50,7 +50,7 @@ function App() {
   },[currentMap])
 
   useEffect(()=>{
-    axios.get('https://map-track.onrender.com/api')
+    axios.get('https://bbg-api.onrender.com/api')
     .then(res=>{
       setCurrentMap(res.data.currentMap)
       setGrid(res.data.grid)
@@ -59,7 +59,7 @@ function App() {
   },[])
 
   useEffect(():(()=>void)=>{
-     socket.current = io('https://map-track.onrender.com/')
+     socket.current = io('https://bbg-api.onrender.com/')
 
      socket.current.on('change-map-res',(map:IMap)=>{
       setCurrentMap(map)
