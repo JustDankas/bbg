@@ -1,0 +1,49 @@
+.cell{
+    width: 10px;
+    height: 10px;
+    transition: background-color .3s;
+    position: relative;
+}
+
+.cell:hover{
+    background-color: white;
+}
+
+@keyframes enlarge{
+    0%{
+        transform: scale(.8);
+    }
+
+    50%{
+        transform: scale(1.2);
+    }
+
+    100%{
+        transform: scale(.8);
+    }
+}
+.mark{
+    position: absolute;
+    font-size: 50px;
+    background-color: transparent;
+    color: #dc2f2f;
+    left: -200%;
+    top: -200%;
+    animation-name: enlarge;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+    animation-fill-mode: backwards;
+    animation-iteration-count: infinite;
+}
+
+.message--c{
+
+
+    width: 100%;
+    padding: 0 1rem;
+    background-color: #393e46;
+    color: #fff;
+    word-break: break-all;
+    /* display: flex;
+    flex-wrap: wrap; */
+}
